@@ -5,13 +5,19 @@ import {
   Text,
   Box,
   Icon,
+  Button,
   useColorModeValue,
 } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import { IoCheckmarkSharp } from 'react-icons/io5';
 import { FC } from 'react';
 
 import { TextUnderline } from '@/components/TextUnderline';
 import { HeroComponents } from '@/components/HomepageSections/HeroComponents';
+
+import {
+  TEMPLATES_LINK,
+} from '../../constants';
 
 interface HeroProps {
   categoriesCount: number;
@@ -57,6 +63,21 @@ export const Hero = ({ categoriesCount, templatesCount }: HeroProps) => {
               The mission of PIAIC is to reshape Pakistan by revolutionizing education, research, and business by adopting latest, cutting-edge technologies. Experts are calling this the 4th industrial revolution. We want Pakistan to become a global hub for AI, data science, cloud native computing, edge computing, blockchain, augmented reality, and internet of things.
             </Text>
           </Stack>
+          <NextLink href="https://portal.piaic.org/signup" passHref>
+            <Button
+              as={'a'}
+              colorScheme={'green'}
+              background={'green.400'}
+              _hover={{ bg: 'green.500' }}
+              color={'white'}
+              variant={'solid'}
+              size={'lg'}
+              fontSize={'md'}
+              rounded={'md'}
+            >
+              Apply
+            </Button>
+          </NextLink>
         </Stack>
         <HeroComponents />
       </Stack>

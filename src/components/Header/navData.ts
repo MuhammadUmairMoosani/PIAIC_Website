@@ -14,27 +14,69 @@ export interface NavItem {
 
 export const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'How It works',
-    children: data.map((category) => ({
-      label: category.name,
-      subLabel: category.subLabel,
-      href: `/${category.id}/${category.children?.[0].id}`,
-    })),
+    label: 'How It Works',
+    href: "https://www.piaic.org/howitworks",
   },
   {
     label: 'Apply',
-    href: CONTRIBUTE_LINK,
+    href: "https://portal.piaic.org/signup",
   },
   {
     label: 'Available Programs',
-    href: GITHUB_LINK,
+    children: [
+      {
+        name: 'Artificial Intelligence',
+        subLabel: '',
+        id: 'page-sections',
+        link: "https://www.piaic.org/artificial-inteligence",
+      },
+      {
+        name: 'Cloud Native and Mobile Web Computing',
+        subLabel: '',
+        id: 'page-sections',
+        link: "https://www.piaic.org/cloud-native",
+      },
+      {
+        name: 'Blockchain',
+        subLabel: '',
+        id: 'page-sections',
+        link: "https://www.piaic.org/block-chain",
+      },
+      {
+        name: 'Internet Of Things',
+        subLabel: '',
+        id: 'page-sections',
+        link: "https://www.piaic.org/iot",
+      },
+      {
+        name: " Web 3.0 and Metaverse Developer ",
+        subLabel: '',
+        id: 'page-sections',
+        link: "https://www.panaverse.co/",
+
+      }
+    ].map((category) => ({
+      label: category.name,
+      subLabel: category.subLabel,
+      href: category.link,
+    })),
   },
   {
     label: 'About',
-    href: DISCORD_INVITE_LINK,
+    children: [
+      {
+        name: 'The President',
+        subLabel: '',
+        id: 'page-sections',
+      },
+    ].map((category) => ({
+      label: category.name,
+      subLabel: category.subLabel,
+      href: `https://www.piaic.org/about`,
+    })),
   },
-    {
+  {
     label: 'WIT',
-    href: DISCORD_INVITE_LINK,
+    href: "https://www.piaic.org/wit",
   },
 ];

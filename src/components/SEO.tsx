@@ -48,6 +48,7 @@ export const SEO = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={twitterImage} />
       <meta name="twitter:card" content="summary_large_image" />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
   );
 };

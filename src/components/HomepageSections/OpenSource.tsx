@@ -20,6 +20,7 @@ import {
   IoMedal,
   IoBookmarks,
 } from 'react-icons/io5';
+import { AspectRatio } from '@chakra-ui/react'
 
 import { CONTRIBUTORS_LINK, GITHUB_LINK } from '../../constants';
 import { TextUnderline } from '@/components/TextUnderline';
@@ -71,6 +72,33 @@ export const OpenSource = ({
 
   return (
     <Container maxW={'7xl'} py={{ base: 14, sm: 20, md: 32 }}>
+      {/* Videos */}
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+        <Stack spacing={4}>
+          <Heading as={'h3'} mb={2}>
+            <TextUnderline>PIAIC</TextUnderline>{" "}
+            Offering Free First Quarter Classes Online
+          </Heading>
+          <Text color={'gray.500'} maxW={'4xl'} fontSize={{ md: 'lg' }}>
+            The mission of PIAIC is to reshape Pakistan by revolutionizing education, research, and business by adopting latest, cutting-edge technologies.
+          </Text>
+        </Stack>
+
+        <Flex justify={'center'} align={'center'}>
+          <Box
+            w={600}
+            borderRadius={10}
+            overflow="hidden"
+          >
+
+            <AspectRatio ratio={1} >
+              <iframe
+                src="https://www.youtube.com/embed/m4g0zd4E_bo" title="PIAIC offering free first quarter classes online" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </AspectRatio>
+          </Box>
+        </Flex>
+      </SimpleGrid>
+      {/* Images */}
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
           <Heading as={'h3'} mb={2}>
