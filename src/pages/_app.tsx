@@ -3,16 +3,16 @@ import type { AppProps } from 'next/app';
 import Router from 'next/router';
 import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
-import NProgress from 'nprogress';
+// import NProgress from 'nprogress';
 import splitbee from '@splitbee/web';
 
 import { theme } from '../theme';
 import { SEO } from '@/components/SEO';
 import { ThemeEditorProvider } from '@hypertheme-editor/chakra-ui';
 
-Router.events.on('routeChangeStart', () => NProgress.start());
-Router.events.on('routeChangeComplete', () => NProgress.done());
-Router.events.on('routeChangeError', () => NProgress.done());
+// Router.events.on('routeChangeStart', () => NProgress.start());
+// Router.events.on('routeChangeComplete', () => NProgress.done());
+// Router.events.on('routeChangeError', () => NProgress.done());
 
 const inIframe = () => window.location !== window.parent.location;
 

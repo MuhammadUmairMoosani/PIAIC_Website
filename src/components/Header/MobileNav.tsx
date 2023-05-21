@@ -20,7 +20,12 @@ interface MobileNavProps {
 }
 
 export const MobileNav = ({ isOpen }: MobileNavProps) => {
+  const bg = useColorModeValue(
+    'rgba(255, 255, 255, 0.8)',
+    'rgba(26, 32, 44, 0.8)'
+  )
   if (!isOpen) return null;
+
 
   return (
     <Stack
@@ -34,10 +39,7 @@ export const MobileNav = ({ isOpen }: MobileNavProps) => {
       minH={'calc(100vh - 60px)'}
       css={{
         backdropFilter: 'saturate(180%) blur(5px)',
-        backgroundColor: useColorModeValue(
-          'rgba(255, 255, 255, 0.8)',
-          'rgba(26, 32, 44, 0.8)'
-        ),
+        backgroundColor: bg
       }}>
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
@@ -93,7 +95,7 @@ const MobileNavItem = ({ href, children, label }: NavItem) => {
           align={'start'}>
           {children &&
             children.map((child) => (
-              <NextLink href={child.href!} passHref={true}>
+              <NextLink key={child.label} href={child.href!} passHref={true}>
                 <Link key={child.label} py={2}>
                   {child.label}
                 </Link>

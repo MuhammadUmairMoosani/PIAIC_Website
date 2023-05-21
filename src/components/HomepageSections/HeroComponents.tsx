@@ -4,6 +4,7 @@ import { useBreakpointValue, Image, useColorModeValue } from '@chakra-ui/react';
 import MotionBox from '@/components/motion/MotionBox';
 
 export const HeroComponents = () => {
+  const bg = useColorModeValue('white', 'gray.800')
   const isMobile = useBreakpointValue({ base: true, lg: false });
   const { scrollYProgress } = useViewportScroll();
 
@@ -55,7 +56,7 @@ export const HeroComponents = () => {
           align={'center'}
           flex={1}
           p={8}
-          bg={useColorModeValue('white', 'gray.800')}
+          bg={bg}
           rounded={'3xl'}
           boxShadow={'xl'}
           w={{ base: `${100 - i * 10}%`, sm: widths[i] }}

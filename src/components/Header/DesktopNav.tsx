@@ -17,6 +17,9 @@ import { NAV_ITEMS, NavItem } from '@/components/Header/navData';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
 export const DesktopNav = (props: BoxProps) => {
+  const color1 = useColorModeValue('gray.600', 'gray.200')
+  const color2 = useColorModeValue('gray.800', 'white')
+  const bg = useColorModeValue('white', 'gray.800')
   return (
     <Stack direction={'row'} spacing={4} {...props}>
       {NAV_ITEMS.map((navItem) => (
@@ -28,10 +31,10 @@ export const DesktopNav = (props: BoxProps) => {
                 href={navItem.href ?? '#'}
                 fontSize={'sm'}
                 fontWeight={500}
-                color={useColorModeValue('gray.600', 'gray.200')}
+                color={color1}
                 _hover={{
                   textDecoration: 'none',
-                  color: useColorModeValue('gray.800', 'white'),
+                  color: color2,
                 }}>
                 {navItem.label}
               </Link>
@@ -41,7 +44,7 @@ export const DesktopNav = (props: BoxProps) => {
               <PopoverContent
                 border={0}
                 boxShadow={'xl'}
-                bg={useColorModeValue('white', 'gray.800')}
+                bg={bg}
                 p={4}
                 rounded={'xl'}
                 minW={'sm'}
@@ -63,7 +66,7 @@ export const DesktopNav = (props: BoxProps) => {
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
     <Link
-      href={href!} passHref={true}
+      href={href!}
       role={'group'}
       display={'block'}
       p={2}

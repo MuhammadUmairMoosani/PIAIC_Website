@@ -24,16 +24,7 @@ interface HeroProps {
   templatesCount?: number;
 }
 
-const Feature: FC = ({ children, ...rest }) => {
-  return (
-    <Stack direction={'row'} align={'center'} {...rest}>
-      <Icon as={IoCheckmarkSharp} color={'green.400'} w={5} h={5} />
-      <Text color={'gray.500'} fontWeight={600}>
-        {children}
-      </Text>
-    </Stack>
-  );
-};
+
 
 export const Hero = ({ categoriesCount, templatesCount }: HeroProps) => {
   return (

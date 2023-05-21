@@ -25,7 +25,6 @@ import { AspectRatio } from '@chakra-ui/react'
 import SimpleImageSlider from "react-simple-image-slider";
 import { CONTRIBUTORS_LINK, GITHUB_LINK } from '../../constants';
 import { TextUnderline } from '@/components/TextUnderline';
-import { Stargazers } from '../../api/stargazers';
 
 export interface Contributor {
   login: string;
@@ -37,7 +36,7 @@ export interface Contributor {
 
 export type OpenSourceProps = {
   contributors: Contributor[];
-  stargazers: Stargazers;
+  stargazers: {};
   categoriesCount: number;
   templatesCount?: number;
 };
@@ -52,7 +51,7 @@ export const OpenSource = ({
     {
       icon: IoStar,
       label: 'GitHub Stars',
-      count: stargazers.totalCount,
+      count: 0,
     },
     {
       icon: IoExtensionPuzzle,

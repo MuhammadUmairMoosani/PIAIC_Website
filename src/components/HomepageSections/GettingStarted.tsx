@@ -41,6 +41,9 @@ const STEPS = [
 ];
 
 export const GettingStarted = () => {
+  const bg1 = useColorModeValue('gray.50', 'gray.900');
+  const bg2 = useColorModeValue('white', 'gray.800');
+  const color1 = useColorModeValue('gray.700', 'white');
   const isMobile = useBreakpointValue({ base: true, lg: false });
   const { scrollYProgress } = useViewportScroll();
 
@@ -64,7 +67,7 @@ export const GettingStarted = () => {
     },
   };
   return (
-    <Box bg={useColorModeValue('gray.50', 'gray.900')} mt={[200, 0]}>
+    <Box bg={bg1} mt={[200, 0]}>
       <Container maxW={'7xl'} py={{ base: 14, sm: 20, md: 20 }}>
         <Heading as={'h3'} textAlign={'center'} mb={{ base: 14, sm: 0 }}>
           Available Programs
@@ -99,7 +102,7 @@ export const GettingStarted = () => {
                     align={'center'}
                     flex={1}
                     p={8}
-                    bg={useColorModeValue('white', 'gray.800')}
+                    bg={bg2}
                     rounded={'3xl'}
                     boxShadow={'xl'}
                     w={{ base: `${100 - i * 10}%`, sm: widths[i] }}
@@ -115,22 +118,10 @@ export const GettingStarted = () => {
                         mt: 0,
                       }}
                     >
-                      {/* <Flex
-                      w={10}
-                      h={10}
-                      bg={useColorModeValue('green.100', 'green.900')}
-                      color={useColorModeValue('green.700', 'green.300')}
-                      fontWeight={700}
-                      align={'center'}
-                      justify={'center'}
-                      fontSize={'sm'}
-                      rounded={'md'}>
-                      0{index + 1}
-                    </Flex> */}
                       <Text
                         fontFamily={'heading'}
                         fontSize={'xl'}
-                        color={useColorModeValue('gray.700', 'white')}>
+                        color={color1}>
                         {step.title}
                       </Text>
                       <Text color={'gray.500'}>{step.text}</Text>
