@@ -12,7 +12,8 @@ import {
   Flex,
   useColorModeValue,
   Box,
-  Image
+  Image,
+  useBreakpointValue
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import {
@@ -76,6 +77,8 @@ export const OpenSource = ({
     { url: "/images/slider3.png" },
   ];
 
+  const isMobile = useBreakpointValue({ base: true, lg: false });
+
   return (
     <>
       {/* Videos */}
@@ -92,7 +95,7 @@ export const OpenSource = ({
 
         <Flex justify={'center'} align={'center'}>
           <Box
-            w={600}
+            w={isMobile ? 350 : 600}
             h={300}
             borderRadius={10}
             overflow="hidden"
@@ -103,7 +106,7 @@ export const OpenSource = ({
               <iframe
                 src="https://www.youtube.com/embed/m4g0zd4E_bo"
                 title="PIAIC offering free first quarter classes online"
-                style={{ width: 600, height: 300 }}
+                style={{ width: isMobile ? 350 : 600, height: 300 }}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
 
               </iframe>
@@ -116,10 +119,12 @@ export const OpenSource = ({
         <SimpleImageSlider
 
           width={"100%"}
-          height={800}
+          height={isMobile ? 170 : 800}
           images={images}
-          showBullets={true}
+          showBullets={isMobile ? false : true}
           showNavs={true}
+          autoPlay={true}
+
         />
       </Box>
       <Stack spacing={4}>
