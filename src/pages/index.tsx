@@ -36,8 +36,6 @@ const Home: NextPage<PageProps> = ({
         categoriesCount={categoriesCount}
         templatesCount={templatesCount}
       />
-      <ExploreTemplates templatesCount={templatesCount!} />
-      {/*<DiscordBanner />*/}
     </AppLayout>
   );
 };
