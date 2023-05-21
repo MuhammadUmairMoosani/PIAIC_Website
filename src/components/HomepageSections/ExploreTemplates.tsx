@@ -39,7 +39,6 @@ export const ExploreTemplates = ({ templatesCount }: ExploreTemplatesProps) => {
             <Flex w={'full'} align={'center'} justify={'center'}>
               <NextLink href={TEMPLATES_LINK} passHref>
                 <Button
-                  as={'a'}
                   bg={'green.600'}
                   color={'white'}
                   px={8}

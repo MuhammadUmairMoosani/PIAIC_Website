@@ -93,7 +93,7 @@ export const OpenSource = ({
 
             <AspectRatio ratio={1} >
               <iframe
-                src="https://www.youtube.com/embed/m4g0zd4E_bo" title="PIAIC offering free first quarter classes online" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                src="https://www.youtube.com/embed/m4g0zd4E_bo" title="PIAIC offering free first quarter classes online" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </AspectRatio>
           </Box>
         </Flex>

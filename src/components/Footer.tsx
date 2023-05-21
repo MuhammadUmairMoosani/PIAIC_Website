@@ -66,7 +66,7 @@ export const Footer = () => {
                 key={category.id}
                 passHref
                 href={`/${category.id}/${category.children?.[0].id}`}>
-                <Link>{category.name}</Link>
+                {category.name}
               </NextLink>
             ))}
           </Stack>
@@ -127,9 +127,7 @@ export const Footer = () => {
             ml: 8,
           }}>
           <NextLink href={'/'} passHref>
-            <Link>
-              <Icon as={Logo} w={{ base: 12 }} h={{ base: 12 }} />
-            </Link>
+            <Icon as={Logo} w={{ base: 12 }} h={{ base: 12 }} />
           </NextLink>
         </Flex>
         <Text pt={6} fontSize={'sm'} textAlign={'center'}>

@@ -65,7 +65,6 @@ export const Hero = ({ categoriesCount, templatesCount }: HeroProps) => {
           </Stack>
           <NextLink href="https://portal.piaic.org/signup" passHref>
             <Button
-              as={'a'}
               colorScheme={'green'}
               background={'green.400'}
               _hover={{ bg: 'green.500' }}

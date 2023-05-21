@@ -74,7 +74,7 @@ export const GettingStarted = () => {
           justify={'space-between'}
           align={{ base: 'center', md: 'flex-start' }}>
           {STEPS.map((step, index) => (
-            <NextLink href={step.link} passHref>
+            <NextLink key={`${index}`} href={step.link} passHref>
               <MotionBox
                 w={{ base: '100%', md: 0 }}
                 h={295}

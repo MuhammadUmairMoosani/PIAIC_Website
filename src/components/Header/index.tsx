@@ -68,7 +68,6 @@ export const Header = () => {
             justify={{ base: 'start', md: 'start' }}>
             <Link href={'/'} passHref>
               <Stack
-                as={'a'}
                 direction={'row'}
                 alignItems={'center'}
                 spacing={{ base: 2, sm: 4 }}>
@@ -93,7 +92,8 @@ export const Header = () => {
             align={'center'}
             spacing={{ base: 6, md: 8 }}
             flex={{ base: 1, md: 'auto' }}
-            justify={'flex-end'}>
+            justify={'flex-end'}
+          >
             <DesktopNav display={{ base: 'none', md: 'flex' }} />
             <IconButton
               size={'sm'}
