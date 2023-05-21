@@ -46,9 +46,10 @@ export const HeroComponents = () => {
           key={i}
           style={{ translateY: isMobile ? 0 : offsets[i] }}
           opacity={0}
-          position={'absolute'}
+          position={["", 'absolute']}
           bottom={0}
           mb={-40}
+          mt={[-10, 0]}
           variants={cardAnimationVariants}
           justify={'center'}
           align={'center'}

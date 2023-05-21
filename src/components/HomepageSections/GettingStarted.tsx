@@ -64,9 +64,9 @@ export const GettingStarted = () => {
     },
   };
   return (
-    <Box bg={useColorModeValue('gray.50', 'gray.900')}>
-      <Container maxW={'7xl'} py={{ base: 14, sm: 20, md: 32 }}>
-        <Heading as={'h3'} textAlign={'center'} mb={{ base: 14, sm: 16 }}>
+    <Box bg={useColorModeValue('gray.50', 'gray.900')} mt={[200, 0]}>
+      <Container maxW={'7xl'} py={{ base: 14, sm: 20, md: 20 }}>
+        <Heading as={'h3'} textAlign={'center'} mb={{ base: 14, sm: 0 }}>
           Available Programs
         </Heading>
         <Flex
@@ -91,9 +91,9 @@ export const GettingStarted = () => {
                     key={i}
                     style={{ translateY: isMobile ? 0 : offsets[i] }}
                     opacity={0}
-                    position={'absolute'}
+                    position={["", 'absolute']}
                     bottom={0}
-                    mb={-40}
+                    mb={[0, -40]}
                     variants={cardAnimationVariants}
                     justify={'center'}
                     align={'center'}

@@ -78,9 +78,9 @@ export const OpenSource = ({
   ];
 
   return (
-    <Container maxW={'7xl'} py={{ base: 14, sm: 20, md: 32 }}>
+    <>
       {/* Videos */}
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} p={[10, 20]} mt={[10, 20]}>
         <Stack spacing={4}>
           <Heading as={'h3'} mb={2}>
             <TextUnderline>PIAIC</TextUnderline>{" "}
@@ -113,17 +113,18 @@ export const OpenSource = ({
         </Flex>
       </SimpleGrid>
       {/* Images */}
-      <Box style={{ marginTop: 100, marginBottom: 20 }}>
+      <Box style={{ marginTop: 100, marginBottom: 20, position: "relative" }}>
         <SimpleImageSlider
-          width={"75%"}
-          height={500}
+
+          width={"100%"}
+          height={800}
           images={images}
           showBullets={true}
           showNavs={true}
         />
       </Box>
       <Stack spacing={4}>
-        <Box textAlign="center">
+        <Box textAlign="center" mb="20">
           <Heading as={'h3'} mb={10} mt="10">
             Strategic Partners
           </Heading>
@@ -133,18 +134,18 @@ export const OpenSource = ({
               src={`/images/panacloud.png`}
               width="100"
               height="50"
-              mr="10"
+              mr={[0, 10]}
             />
             <Image
               alt={'Component Placeholder'}
               src={`/images/saylani.png`}
               width="100"
               height="50"
-              ml="10"
+              mr={[0, 10]}
             />
           </Box>
         </Box>
       </Stack>
-    </Container>
+    </>
   );
 };
